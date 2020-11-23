@@ -1,5 +1,5 @@
-const app = require('express')()
-const { v4 } = require('uuid')
+const app = require('express')();
+const { v4 } = require('uuid');
 
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`

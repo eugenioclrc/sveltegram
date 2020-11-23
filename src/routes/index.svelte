@@ -7,10 +7,6 @@ import Postgram from '$components/postgram.svelte';
 		{#each $posts as post}
 			<Postgram {post} />
 		{/each}
-		<!-- <vuegram-post v-for="post in posts"
-			:post="post"
-			:key="posts.indexOf(post)">
-		</vuegram-post> -->
 	</div>
 
 <style>
