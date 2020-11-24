@@ -1,6 +1,10 @@
 ### source idea
 https://morioh.com/p/bb46fb2e8a3b
 
+### more ideas;
+https://github.com/savvyapps/SAVuegram
+https://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
