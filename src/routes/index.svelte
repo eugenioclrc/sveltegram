@@ -1,12 +1,26 @@
 <script>
-import posts from '$components/store/posts.js';
 import Postgram from '$components/postgram.svelte';
+import { onMount } from 'svelte';
+
+let fetchPosts = Promise.resolve([]);
+
+onMount(() => {
+	fetchPosts = fetch('/api/posts').then(r => r.json());
+});
+
 
 </script>
 	<div class="feed">
-		{#each $posts as post}
-			<Postgram {post} />
-		{/each}
+		{#await fetchPosts}
+			<p>Loading posts</p>
+		{:then posts}
+			{#each posts as post}
+				<Postgram {post} />
+			{/each}
+		{:catch err}
+			<p>error on fetching posts</p>
+			<p style="color: red">{err.message}</p>
+		{/await}
 	</div>
 
 <style>
